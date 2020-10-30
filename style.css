@@ -56,6 +56,39 @@ nav li a {
   position: relative;
   top: 45%;
   color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1em;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+nav li a:hover {
+  transform: scale(1.25)
+}
+
+nav li a::before,
+nav li a::after {
+  content: "";
+  width: 25vw;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 47.5%;
+  opacity: 0;
+}
+
+nav li a::before {
+  left: 0;
+}
+
+nav li a::after {
+  right: 0;
+}
+
+nav li a:hover::before,
+nav li a:hover::after {
+  opacity: 1;
 }
 
 nav li:nth-of-type(1) {
